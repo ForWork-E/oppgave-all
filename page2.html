@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
+    <script src="script.js" defer></script> <!-- Use defer to ensure DOM is loaded before script -->
   </head>
   <body>
     <nav>
@@ -38,23 +38,14 @@
                   <p><strong><em>VillLaks</em></strong></p>
               </div>
                    </footer>
-                     <div class="dropdown">
-                    <a>Info!</a>
-                      <button><a><strong><em>Habitat: Kystfarvann i Atlanterhavet og Nordsjøen.
-                        Livsstil: Pelagisk fisk, ofte i store stimer.
-                        Mat: Fettrikt og smakfullt kjøtt, ofte grillet eller røkt.</em></strong></a></button>
+                     <div class="dropdown" onclick="playSound('sounds/fugl.mp3')">
+                    <a>Info!</a><button><a><strong><em>Habitat: Kystfarvann i Atlanterhavet og Nordsjøen. Livsstil: Pelagisk fisk, ofte i store stimer. Mat: Fettrikt og smakfullt kjøtt, ofte grillet eller røkt.</em></strong></a></button>
                       </div>
-                      <div class="dropdowntwo">
-                        <a>Info!</a>
-                          <button><a><strong><em>Habitat: Ferskvann og saltvann, ofte i innsjøer og elver.
-                            Typer: Inkluderer brunørret og regnbueørret.
-                            Mat: Delikat kjøtt, populært i matlaging.</em></strong></a></button>
+                      <div class="dropdowntwo" onclick="playSound('sounds/fugl.mp3')"></div>
+                        <a>Info!</a><button><a><strong><em>Habitat: Ferskvann og saltvann, ofte i innsjøer og elver. Typer: Inkluderer brunørret og regnbueørret. Mat: Delikat kjøtt, populært i matlaging.</em></strong></a></button>
                           </div>
-                          <div class="dropdownthree">
-                            <a>Info!</a>
-                              <button><a><strong><em>Habitat: Ferskvann og saltvann, ofte i innsjøer og elver.
-                                Typer: Inkluderer brunørret og regnbueørret.
-                                Mat: Delikat kjøtt, populært i matlaging.</em></strong></a></button>
+                          <div class="dropdownthree" onclick="playSound('sounds/fugl.mp3')"></div>
+                            <a>Info!</a><button><a><strong><em>Habitat: Ferskvann og saltvann, ofte i innsjøer og elver. Typer: Inkluderer brunørret og regnbueørret. Mat: Delikat kjøtt, populært i matlaging.</em></strong></a></button>
                               </div>
                                 </body>
                                  </html> 
