@@ -88,17 +88,64 @@ img {
   box-sizing: border-box; /* Include padding in width calculation */
 }
 
-.BMWOne {
-text-align: left;
-color: red;
+button {
+  text-align: center;
+  display: flex; /* Use flexbox for centering */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  position: relative; /* Ensure dropdown content positions relative to this */
+  background-color: rgb(0, 0, 0);
+  color: red;
 }
 
-.BMWTwo {
-text-align: center;
-color: blue;
+button:hover {
+  display: flex; /* Use flexbox for centering */
+  margin: 0;
+  position: absolute;
+  background-color: #000000;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px 0px rgba(238, 5, 5, 0.959);
+  color: #ffffff;
+  padding: 12px 16px;
+  z-index: 1;
+  text-align: center;
 }
 
-.BMWThree {
-text-align: right;
-color: green;
+.dropdown {
+  text-align: left;
+  margin: 0;
+}
+.dropdowntwo {
+  display: flex;
+  flex-direction: row;
+  text-align: right;
+  align-items: right; 
+  justify-content: right; 
+  position: right; 
+  margin: 0;
+}
+  .dropdownthree {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    position: relative; 
+    margin: 0;
+  }
+
+  
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  margin: 0;
+}
+
+ol {
+  text-align: center;
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+  position: relative;
 }
