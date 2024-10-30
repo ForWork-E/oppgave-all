@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
+    <script src="script.js" defer></script> <!-- Use defer to ensure DOM is loaded before script -->
   </head>
   <body>
     <nav>
@@ -27,29 +27,29 @@
    <footer>
     <div class="MineFavoritter">
         <div class="columns">
-            <div class="column" style="background-image: url('images/element.jpg');">
+            <div class="column" style="background-image: url('images/element.jpg');" onclick="playSound('sounds/coin.mp3')">
                 <h3><strong>En Av Mine Favoritt Spill</strong></h3>
                 <p><strong><em>GTA5</em></strong></p>
             </div>
-            <div class="column" style="background-image: url('images/element.jpg');">
+            <div class="column" style="background-image: url('images/element.jpg');" onclick="playSound('sounds/coin.mp3')">
                 <h3><strong>En Av Mine Favoritt Spill</strong></h3>
                 <p><strong><em>COD Spill</em></strong></p>
             </div>
-            <div class="column" style="background-image: url('images/element.jpg');">
+            <div class="column" style="background-image: url('images/element.jpg');" onclick="playSound('sounds/coin.mp3')">
                 <h3><strong>En Av Mine Favoritt Spill</strong></h3>
                 <p><strong><em>Phasmophobia</em></strong></p>
             </div>
                  </footer>
 
-                 <div class="dropdown">
+                 <div class="dropdown" onclick="playSound('sounds/coin.mp3')">
                   <a>Info!</a>
                     <button><a><strong><em>GTA5 er ett spill der man stjeler biler og raner banker</em></strong></a></button>
                     </div>
-                    <div class="dropdowntwo">
+                    <div class="dropdowntwo" onclick="playSound('sounds/coin.mp3')">
                       <a>Info!</a>
                         <button><a><strong><em>Phasmophobia er et skrekkspill om og ha forbi mot spøkelser</em></strong></a></button>
                         </div>
-                        <div class="dropdownthree">
+                        <div class="dropdownthree" onclick="playSound('sounds/coin.mp3')">
                           <a>Info!</a>
                             <button><a><strong><em>COD er et first person skyte spill. dem har Zombies også</em></strong></a></button>
                             </div>
