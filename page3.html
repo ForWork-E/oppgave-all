@@ -6,15 +6,26 @@
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script> <!-- Use defer to ensure DOM is loaded before script -->
+    <style>
+      #mainContent {
+          display: none; /* Hide the main content by default */
+      }
+  </style>
   </head>
   <body>
-    <nav>
+    <script>
+      if (localStorage.getItem('isLoggedIn') !== 'true') {
+          alert('Du må logge inn for å få tilgang til denne siden.');
+          window.location.href = '/'; // Redirect to the login page
+      }
+  </script>
+     <nav>
       <a href="/" aria-current="page">Hjem</a>
       <a href="/page2.html">Andre Side</a>
       <a href="/page3.html">Side 3</a>
       <a href="/oppsummering.html">Oppsummering</a>
     </nav>
-     
+     <div id="mainContent">
     <header>
       <h1 style="text-align: center;">Min 3 Side</h1>
     </header>
@@ -29,15 +40,15 @@
         <div class="columns">
             <div class="column" style="background-image: url('images/element.jpg');" onclick="playSound('sounds/coin.mp3')">
                 <h3><strong>En Av Mine Favoritt Spill</strong></h3>
-                <p><strong><em>GTA5</em></strong></p>
+                <p><strong><em>GTA5 &#128513;</em></strong></p>
             </div>
             <div class="column" style="background-image: url('images/element.jpg');" onclick="playSound('sounds/coin.mp3')">
                 <h3><strong>En Av Mine Favoritt Spill</strong></h3>
-                <p><strong><em>COD Spill</em></strong></p>
+                <p><strong><em>COD Spill &#128513;</em></strong></p>
             </div>
             <div class="column" style="background-image: url('images/element.jpg');" onclick="playSound('sounds/coin.mp3')">
                 <h3><strong>En Av Mine Favoritt Spill</strong></h3>
-                <p><strong><em>Phasmophobia</em></strong></p>
+                <p><strong><em>Phasmophobia &#128513;</em></strong></p>
             </div>
                  </footer>
 
@@ -53,6 +64,11 @@
                           <a>Info!</a>
                             <button><a><strong><em>COD er et first person skyte spill. dem har Zombies også</em></strong></a></button>
                             </div>
+                            <script>
+                              // If logged in, show the main content
+                              if (localStorage.getItem('isLoggedIn') === 'true') 
+                                  document.getElementById('mainContent').style.display = 'block'; // Show
+                          </script> 
                              </body>
                               </html>
                               

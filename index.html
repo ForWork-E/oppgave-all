@@ -5,54 +5,98 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script> <!-- Use defer to ensure DOM is loaded before script -->
+    <script src="script.js" defer></script>
+    <style>
+        #mainContent {
+            display: none; /* Hide the main content by default */
+        }
+    </style>
 </head>
 <body>
     <nav>
         <a href="/" aria-current="page">Hjem</a>
-        <a href="/page2.html">Andre Side</a>
-        <a href="/page3.html">Side 3</a>
-        <a href="/oppsummering.html">Oppsummering</a>
+        <a href="page2.html">Andre Side</a>
+        <a href="page3.html">Side 3</a>
+        <a href="oppsummering.html">Oppsummering</a>
     </nav>
-     
-    <header>
-        <h1 style="text-align: center;">Min Side</h1>
-    </header>
-    
-    <main>
-        <p style="text-align: center;"><strong><em>Jeg liker og Spille Video Spill og Jakte, Liker Også Biler.</em></strong></p>
-        <img id="bmwImage" src="images/bmwTwo.jpg" alt="bmw parkert med leiligheter" onclick="playSound('sounds/sound1.mp3')">
-    </main>
-   
-    <footer>
-        <div class="MineFavoritter">
-            <div class="columns">
-                <div class="column" style="background-image: url('images/bmwOne.jpg');" onclick="playSound('sounds/bmw.mp3')">
-                    <h3><strong>En Av Mine Favoritt biler</strong></h3>
-                    <p><strong><em>BMW M8GCC</em></strong></p>
-                </div>
-                <div class="column" style="background-image: url('images/bmwOne.jpg');" onclick="playSound('sounds/bmw.mp3')">
-                    <h3><strong>En Av Mine Favoritt biler</strong></h3>
-                    <p><strong><em>BMW M5 E60</em></strong></p>
-                </div>
-                <div class="column" style="background-image: url('images/bmwOne.jpg');" onclick="playSound('sounds/bmw.mp3')">
-                    <h3><strong>En Av Mine Favoritt biler</strong></h3>
-                    <p><strong><em>BMW M5 CS</em></strong></p>
+
+    <section id="loginSection" style="text-align: center; margin: 20px;">
+        <h2>Login</h2>
+        <form id="loginForm" onsubmit="return validatePassword(event)">
+            <input type="password" id="password" placeholder="Skriv inn passord" required />
+            <button type="submit">Logg Inn</button>
+        </form>
+        <p id="loginMessage" style="color: red;"></p>
+    </section>
+
+    <div id="mainContent"> <!-- Wrap the entire content in a div -->
+        <header>
+            <h1 style="text-align: center;">Min Side</h1>
+        </header>
+
+        <main>
+            <p style="text-align: center;">
+                <strong><em>Jeg liker og spille video spill og jakte, liker også biler.</em></strong>
+            </p>
+            <img id="bmwImage" src="images/bmwTwo.jpg" alt="bmw parkert med leiligheter">
+        </main>
+
+        <footer id="footerContent">
+            <div class="MineFavoritter">
+                <div class="columns">
+                    <div class="column" style="background-image: url('images/bmwOne.jpg');" onclick="playSound('sounds/bmw.mp3')">
+                        <h3><strong>En Av Mine Favoritt biler</strong></h3>
+                        <p><strong><em>BMW M8GCC &#128513;</em></strong></p>
+                    </div>
+                    <div class="column" style="background-image: url('images/bmwOne.jpg');" onclick="playSound('sounds/bmw.mp3')">
+                        <h3><strong>En Av Mine Favoritt biler</strong></h3>
+                        <p><strong><em>BMW M5 E60 &#128513;</em></strong></p>
+                    </div>
+                    <div class="column" style="background-image: url('images/bmwOne.jpg');" onclick="playSound('sounds/bmw.mp3')">
+                        <h3><strong>En Av Mine Favoritt biler</strong></h3>
+                        <p><strong><em>BMW M5 CS &#128513;</em></strong></p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </footer>
 
-    <div class="dropdown" onclick="playSound('sounds/bmw.mp3')">
-        <a>Info!</a>
-        <button><a><strong><em>Dette er en BMW M8 Competition Gran Coupé</em></strong></a></button>
+        <div class="dropdown" onclick="playSound('sounds/bmw.mp3')">
+            <a>Info!</a>
+            <button><strong><em>Dette er en BMW M8 Competition Gran Coupé</em></strong></button>
+        </div>
+        <div class="dropdowntwo" onclick="playSound('sounds/bmw.mp3')">
+            <a>Info!</a>
+            <button><strong><em>Dette er en BMW M5 CS Aggressiv PersonBil</em></strong></button>
+        </div>
+        <div class="dropdownthree" onclick="playSound('sounds/bmw.mp3')">
+            <a>Info!</a>
+            <button><strong><em>Dette er en BMW M5 E60 med V10 Motor som ligner veldig på F1</em></strong></button>
+        </div>
     </div>
-    <div class="dropdowntwo" onclick="playSound('sounds/bmw.mp3')">
-        <a>Info!</a>
-        <button><a><strong><em>Dette er en BMW M5 CS Aggressiv PersonBil</em></strong></a></button>
-    </div>
-    <div class="dropdownthree" onclick="playSound('sounds/bmw.mp3')">
-        <a>Info!</a><button><a><strong><em>Dette er en BMW M5 E60 med V10 Motor som ligner veldig på F1</em></strong></a></button>
-    </div>
+
+    <script>
+        function validatePassword(event) {
+            event.preventDefault(); // Prevent form submission
+            const passwordInput = document.getElementById('password');
+            const password = passwordInput.value;
+            const correctPassword = 'ForWork-E'; // Set your desired password here
+
+            if (password === correctPassword) {
+                alert('Innlogging vellykket!');
+                localStorage.setItem('isLoggedIn', 'true'); // Set login flag
+                document.getElementById('mainContent').style.display = 'block'; // Show main content
+                document.getElementById('loginSection').style.display = 'none'; // Hide login section
+            } else {
+                document.getElementById('loginMessage').innerText = 'Feil passord, prøv igjen.';
+                passwordInput.value = ''; // Clear the input field
+            }
+        }
+
+        // Check if the user is logged in
+        if (localStorage.getItem('isLoggedIn') === 'true') {
+            document.getElementById('mainContent').style.display = 'block'; // Show main content
+            document.getElementById('loginSection').style.display = 'none'; // Hide login section
+        }
+    </script>
 </body>
 </html>

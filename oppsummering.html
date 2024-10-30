@@ -6,8 +6,19 @@
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="styles.css" />
     <script type="module" src="script.js"></script>
+    <style>
+      #mainContent {
+          display: none; /* Hide the main content by default */
+      }
+  </style>
   </head>
   <body>
+    <script>
+      if (localStorage.getItem('isLoggedIn') !== 'true') {
+          alert('Du må logge inn for å få tilgang til denne siden.');
+          window.location.href = '/'; // Redirect to the login page
+      }
+  </script>
   <style>
       body {
         background-image: url('images/scott.jpg');
@@ -19,17 +30,34 @@
       <a href="/page3.html">Side 3</a>
       <a href="/oppsummering.html">Oppsummering</a>
     </nav>
-     
+    <div id="mainContent">
     <header>
-      <h1 style="text-align: center; color: red;"><strong><em>Oppsummering</em></strong></h1>
+      <h1 style="text-align: center; color: red;"><strong><em>Oppsummering &#128513;</em></strong></h1>
       <center><ol>
-        <li Style="color: rgb(253, 0, 0);"><strong><em>video Spill</em></strong></li>
-        <p Style="color: rgb(255, 6, 6);"><strong><em>GTA5/COD/Phasmophobia</em></strong></p>
-        <li Style="color: rgb(247, 7, 7);"><strong><em>fiske&jakt</em></strong></li>
-        <p Style="color: rgb(255, 6, 6);"><strong><em>Laks/Ørret/Makrell</em></strong></p>
-        <li Style="color: rgb(255, 6, 6);"><strong><em>Biler</em></strong></li>
-        <p Style="color: rgb(255, 6, 6);"><strong><em>M5CS/M5E60/M8GCC</em></strong></p>
+        <li Style="color: rgb(253, 0, 0);"><strong><em>video Spill &#128513;</em></strong></li>
+        <p Style="color: rgb(255, 6, 6);"><strong><em>GTA5/COD/Phasmophobia &#128513;</em></strong></p>
+        <li Style="color: rgb(247, 7, 7);"><strong><em>fiske&jakt &#128513;</em></strong></li>
+        <p Style="color: rgb(255, 6, 6);"><strong><em>Laks/Ørret/Makrell &#128513;</em></strong></p>
+        <li Style="color: rgb(255, 6, 6);"><strong><em>Biler &#128513;</em></strong></li>
+        <p Style="color: rgb(255, 6, 6);"><strong><em>M5CS/M5E60/M8GCC &#128513;</em></strong></p>
       </ol></center>
-    </header>
-  </body>
-</html>
+      <button type="button"
+      onclick="document.getElementById('demo').innerHTML = Date()"><strong><em>Trykk meg til og vise tid/dato</em></strong></button>
+        <p id="demo"></p>
+        <svg height="130" width="500">
+        <defs>
+          <linearGradient id="grad1">
+            <stop offset="0%" stop-color="yellow" />
+            <stop offset="100%" stop-color="red" />
+          </linearGradient>
+        </defs>
+        <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
+        <text fill="#ffffff" font-size="45" font-family="Verdana" x="50" y="86">Info</text>
+      </svg>
+      <script>
+        // If logged in, show the main content
+        if (localStorage.getItem('isLoggedIn') === 'true') 
+            document.getElementById('mainContent').style.display = 'block'; // Show
+    </script> 
+      </body>
+       </html>

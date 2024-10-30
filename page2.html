@@ -1,58 +1,76 @@
 <!DOCTYPE html>
 <html lang="no">
-  <head>
+<head>
     <title>2 Side</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script> <!-- Use defer to ensure DOM is loaded before script -->
-  </head>
-  <body>
-    <nav>
-      <a href="/">Hjem</a>
-      <a href="page2.html" aria-current="page">2 Side</a>
-      <a href="page3.html">Side 3</a>
-      <a href="oppsummering.html">Oppsummering</a>
-    </nav>
-    <main>
-      <h1 style="text-align: center;">Min Andre Side</h1>
-    </main>
-    <main>
-      <p style="text-align: center;"><strong><em>Jeg liker og Spille Video Spill og Jakte,  Liker Også Biler.</em></strong></p>
-      <img src="images/Hauk.jpg" alt="en Hauk">
-     </main>
-     
-     <footer>
-      <div class="MineFavoritter">
-          <div class="columns">
-              <div class="column" style="background-image: url('images/reed.jpg');" onclick="playSound('sounds/hauk.mp3')">
-                <h3><strong>En Av Mine Favoritt Fisker og Fiske</strong></h3>
-                  <p><strong><em>Makrell</em></strong></p>
-              </div>
-              <div class="column" style="background-image: url('images/reed.jpg');" onclick="playSound('sounds/hauk.mp3')">
-                <h3><strong>En Av Mine Favoritt Fisker og Fiske</strong></h3>
-                  <p><strong><em>Ørret</em></strong></p>
-              </div>
-              <div class="column" style="background-image: url('images/reed.jpg');" onclick="playSound('sounds/hauk.mp3')">
-                <h3><strong>En Av Mine Favoritt Fisker og Fiske</strong></h3>
-                  <p><strong><em>VillLaks</em></strong></p>
-              </div>
-          </div>
-      </div>
-  </footer>
-    </footer>
+    <script src="script.js" defer></script>
+    <style>
+        #mainContent {
+            display: none; /* Hide the main content by default */
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // Check if the user is logged in
+        if (localStorage.getItem('isLoggedIn') !== 'true') {
+            alert('Du må logge inn for å få tilgang til denne siden.');
+            window.location.href = '/'; // Redirect to the login page
+        }
+    </script>
 
-    <div class="dropdown" onclick="playSound('sounds/fugl.mp3')">
-        <a>Info!</a>
-        <button><a><strong><em>Habitat: Kystfarvann i Atlanterhavet og Nordsjøen. Livsstil: Pelagisk fisk, ofte i store stimer. Mat: Fettrikt og smakfullt kjøtt, ofte grillet eller røkt.</em></strong></a></button>
+    <nav>
+        <a href="/">Hjem</a>
+        <a href="page2.html" aria-current="page">2 Side</a>
+        <a href="page3.html">Side 3</a>
+        <a href="oppsummering.html">Oppsummering</a>
+    </nav>
+
+    <div id="mainContent">
+        <main>
+            <h1 style="text-align: center;">Min Andre Side</h1>
+            <p style="text-align: center;"><strong><em>Jeg liker og spille video spill og jakte, liker også biler.</em></strong></p>
+            <img src="images/Hauk.jpg" alt="en Hauk">
+        </main>
+
+        <footer>
+            <div class="MineFavoritter">
+                <div class="columns">
+                    <div class="column" style="background-image: url('images/reed.jpg');" onclick="playSound('sounds/hauk.mp3')">
+                        <h3><strong>En Av Mine Favoritt Fisker og Fiske</strong></h3>
+                        <p><strong><em>Makrell &#128513;</em></strong></p>
+                    </div>
+                    <div class="column" style="background-image: url('images/reed.jpg');" onclick="playSound('sounds/hauk.mp3')">
+                        <h3><strong>En Av Mine Favoritt Fisker og Fiske</strong></h3>
+                        <p><strong><em>Ørret &#128513;</em></strong></p>
+                    </div>
+                    <div class="column" style="background-image: url('images/reed.jpg');" onclick="playSound('sounds/hauk.mp3')">
+                        <h3><strong>En Av Mine Favoritt Fisker og Fiske</strong></h3>
+                        <p><strong><em>VillLaks &#128513;</em></strong></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <div class="dropdown" onclick="playSound('sounds/fugl.mp3')">
+            <a>Info!</a>
+            <button><strong><em>Habitat: Kystfarvann i Atlanterhavet og Nordsjøen.</em></strong></button>
+        </div>
+        <div class="dropdowntwo" onclick="playSound('sounds/fugl.mp3')">
+            <a>Info!</a>
+            <button><strong><em>Habitat: Kalde elver og havet, spesielt i Nord-Amerika og Europa.</em></strong></button>
+        </div>
+        <div class="dropdownthree" onclick="playSound('sounds/fugl.mp3')">
+            <a>Info!</a>
+            <button><strong><em>Habitat: Ferskvann og saltvann, ofte i innsjøer og elver.</em></strong></button>
+        </div>
     </div>
-    <div class="dropdowntwo" onclick="playSound('sounds/fugl.mp3')">
-        <a>Info!</a>
-        <button><a><strong><em>Habitat: Kalde elver og havet, spesielt i Nord-Amerika og Europa. Livssyklus: Fødes i ferskvann, migrerer til havet, returnerer for å gyte.Mat: Smakfullt og fettrikt kjøtt.</em></strong></a></button>
-    </div>
-    <div class="dropdownthree" onclick="playSound('sounds/fugl.mp3')"> 
-      <a>Info!</a>
-      <button><a><strong><em>Habitat: Ferskvann og saltvann, ofte i innsjøer og elver. Typer: Inkluderer brunørret og regnbueørret. Mat: Delikat kjøtt, populært i matlaging.</em></strong></a></button>
-    </div>
+      <script>
+        // If logged in, show the main content
+        if (localStorage.getItem('isLoggedIn') === 'true') 
+            document.getElementById('mainContent').style.display = 'block'; // Show
+    </script> 
 </body>
 </html>
