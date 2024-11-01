@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="no">
   <head>
-    <title>Hjem</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="styles.css">
     <script type="module" src="script.js"></script>
+    <title>oppsummering</title>
+    <meta name="description" content="her tar vi oppsummering fra alle dem andre sidene.">
     <style>
       #mainContent {
           display: none; /* Hide the main content by default */
@@ -21,7 +22,7 @@
   </script>
   <style>
       body {
-        background-image: url('images/scott.jpg');
+        background-image: url('images/scott.WebP');
       }
       </style>
     <nav>
@@ -44,16 +45,7 @@
       <button type="button"
       onclick="document.getElementById('demo').innerHTML = Date()"><strong><em>Trykk meg til og vise tid/dato</em></strong></button>
         <p id="demo"></p>
-        <svg height="130" width="500">
-        <defs>
-          <linearGradient id="grad1">
-            <stop offset="0%" stop-color="yellow" />
-            <stop offset="100%" stop-color="red" />
-          </linearGradient>
-        </defs>
-        <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
-        <text fill="#ffffff" font-size="45" font-family="Verdana" x="50" y="86">Info</text>
-      </svg>
+        <buttontwo style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative;"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="images/info.WebP" alt="image of info sign"><strong><em>Click The image</em></strong></buttontwo>
       <script>
         // If logged in, show the main content
         if (localStorage.getItem('isLoggedIn') === 'true') 

@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
-    <title>Hjem</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
+    <title>Hjem</title>
+    <meta name="description" content="min side 1 info om hva biler jeg liker!">
     <style>
         #mainContent {
-            display: none; /* Hide the main content by default */
+            display: none; 
         }
     </style>
 </head>
@@ -29,7 +30,7 @@
         <p id="loginMessage" style="color: red;"></p>
     </section>
 
-    <div id="mainContent"> <!-- Wrap the entire content in a div -->
+    <div id="mainContent"> 
         <header>
             <h1 style="text-align: center;">Min Side</h1>
         </header>
@@ -38,21 +39,21 @@
             <p style="text-align: center;">
                 <strong><em>Jeg liker og spille video spill og jakte, liker også biler.</em></strong>
             </p>
-            <img id="bmwImage" src="images/bmwTwo.jpg" alt="bmw parkert med leiligheter">
+            <img id="bmwImage" src="images/bmwTwo.WebP" alt="bmw parkert med leiligheter">
         </main>
 
         <footer id="footerContent">
             <div class="MineFavoritter">
                 <div class="columns">
-                    <div class="column" style="background-image: url('images/bmwOne.jpg');" onclick="playSound('sounds/bmw.mp3')">
+                    <div class="column" style="background-image: url('images/bmwOne.WebP');" onclick="playSound('sounds/bmw.mp4')">
                         <h3><strong>En Av Mine Favoritt biler</strong></h3>
                         <p><strong><em>BMW M8GCC &#128513;</em></strong></p>
                     </div>
-                    <div class="column" style="background-image: url('images/bmwOne.jpg');" onclick="playSound('sounds/bmw.mp3')">
+                    <div class="column" style="background-image: url('images/bmwOne.WebP');" onclick="playSound('sounds/bmw.mp4')">
                         <h3><strong>En Av Mine Favoritt biler</strong></h3>
                         <p><strong><em>BMW M5 E60 &#128513;</em></strong></p>
                     </div>
-                    <div class="column" style="background-image: url('images/bmwOne.jpg');" onclick="playSound('sounds/bmw.mp3')">
+                    <div class="column" style="background-image: url('images/bmwOne.WebP');" onclick="playSound('sounds/bmw.mp4')">
                         <h3><strong>En Av Mine Favoritt biler</strong></h3>
                         <p><strong><em>BMW M5 CS &#128513;</em></strong></p>
                     </div>
@@ -60,22 +61,22 @@
             </div>
         </footer>
 
-        <div class="dropdown" onclick="playSound('sounds/bmw.mp3')">
+        <div class="dropdown" onclick="playSound('sounds/bmw.mp4')">
             <a>Info!</a>
             <button><a><strong><em>Dette er en BMW M8 Competition Gran Coupé</em></strong></a></button>
         </div>
-        <div class="dropdowntwo" onclick="playSound('sounds/bmw.mp3')">
+        <div class="dropdowntwo" onclick="playSound('sounds/bmw.mp4')">
             <a>Info!</a>
             <button><a><strong><em>Dette er en BMW M5 CS Aggressiv PersonBil</em></strong></a></button>
         </div>
-        <div class="dropdownthree" onclick="playSound('sounds/bmw.mp3')">
+        <div class="dropdownthree" onclick="playSound('sounds/bmw.mp4')">
             <a>Info!</a>
             <button><a><strong><em>Dette er en BMW M5 E60 med V10 Motor som ligner veldig på F1</em></strong></a></button>
         </div>
     </div>
     <script>
         function validatePassword(event) {
-            event.preventDefault(); // Prevent form submission
+            event.preventDefault(); 
             const passwordInput = document.getElementById('password');
             const password = passwordInput.value;
             const correctPassword = 'ForWork-E'; // Set your desired password here
