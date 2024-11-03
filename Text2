@@ -1,0 +1,24 @@
+@media (max-width: 768px) {
+    .columns {
+        flex-direction: column;
+    }
+
+    .column {
+        width: 100%; /* Make each column full-width on mobile */
+        margin-bottom: 20px; /* Add spacing between columns */
+    }
+
+    nav {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    nav a {
+        padding: 10px 0;
+    }
+
+    #mainContent img {
+        width: 100%; /* Ensure images scale to fit smaller screens */
+        height: auto;
+    }
+}
