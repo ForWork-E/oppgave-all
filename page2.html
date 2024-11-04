@@ -52,15 +52,12 @@
             </div>
         </footer>
         <div class="dropdown" onclick="playSound('sounds/fugl.mp4')">
-            <a>Info!</a>
             <button><a></strong><strong><em>Habitat:Kystfarvann i Atlanterhavet og Nordsjøen.</em></strong></a></button>
         </div>
         <div class="dropdowntwo" onclick="playSound('sounds/fugl.mp4')">
-            <a>Info!</a>
             <button><a><strong><em>Habitat:Kalde elver og havet, spesielt i Nord-Amerika og Europa.</em></strong></a></button>
         </div>
         <div class="dropdownthree" onclick="playSound('sounds/fugl.mp4')">
-            <a>Info!</a>
             <button><a><strong><em>Habitat:Ferskvann og saltvann, ofte i innsjøer og elver.</em></strong></a></button>
         </div>
     </div>
@@ -68,6 +65,11 @@
         // If logged in, show the main content
         if (localStorage.getItem('isLoggedIn') === 'true') 
             document.getElementById('mainContent').style.display = 'block'; // Show
+    
+        function playSound(src) {
+            const audio = new Audio(src);
+            audio.play();
+        }
     </script> 
 </body>
 </html>
