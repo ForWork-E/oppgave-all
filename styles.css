@@ -38,6 +38,11 @@ nav a[aria-current='page'] {
   padding: 10px 0;
 }
 
+.submit {
+  cursor: pointer;
+  cursor: crosshair;
+}
+
 main {
   padding: 1rem;
 }
