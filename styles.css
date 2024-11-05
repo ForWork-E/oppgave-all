@@ -37,11 +37,16 @@ nav a[aria-current='page'] {
   background-color: #000000;
   padding: 10px 0;
 }
+#loginForm {
+  padding: 10px;
+}
+
 
 main, #bmwImage {
   height: auto;
   width: auto;
   padding: 1rem;
+  padding: 10px;
 }
 
 h1 {
