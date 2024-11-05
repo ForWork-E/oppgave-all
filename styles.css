@@ -38,13 +38,6 @@ nav a[aria-current='page'] {
   padding: 10px 0;
 }
 
-.bodytwo {
-  display: flex;
-  width: 100px;
-  height: 100px;
-}
-
-
 main {
   padding: 1rem;
 }
