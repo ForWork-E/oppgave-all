@@ -39,9 +39,6 @@ nav a[aria-current='page'] {
 }
 #loginForm {
   padding: 10px;
-  margin: 10px;
-  height: 5px;
-  width: 5px;
 }
 
 
@@ -49,8 +46,6 @@ main, #bmwImage {
   height: auto;
   width: auto;
   padding: 1rem;
-  padding: 10px;
-  margin: 10px;
 }
 
 h1 {
