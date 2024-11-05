@@ -40,6 +40,8 @@ nav a[aria-current='page'] {
 #loginForm {
   padding: 10px;
   margin: 10px;
+  height: 5px;
+  width: 5px;
 }
 
 
