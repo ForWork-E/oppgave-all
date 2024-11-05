@@ -103,7 +103,7 @@ button {
   text-align: center;
 }
 
-.dropdown button, .dropdowntwo button, .dropdownthree button, .submit {
+.dropdown button, .dropdowntwo button, .dropdownthree button, .submit button {
   background: var(--button-color);
   border: none;
   color: rgb(250, 4, 4);
@@ -112,7 +112,7 @@ button {
   transition: background 0.3s;
 }
 
-.dropdown button:hover, .dropdowntwo button:hover, .dropdownthree button:hover, .submit {
+.dropdown button:hover, .dropdowntwo button:hover, .dropdownthree button:hover, .submit button:hover {
   background: #b30000;
 }
 
