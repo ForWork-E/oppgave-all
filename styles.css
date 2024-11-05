@@ -38,6 +38,14 @@ nav a[aria-current='page'] {
   padding: 10px 0;
 }
 
+
+section.img {
+display: flex;
+height: 100px;
+width: 100px;
+
+}
+
 main {
   padding: 1rem;
 }
