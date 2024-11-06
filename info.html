@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="script.js"></script>
+    <title>info</title>
+    <meta name="description" content="her tar vi og sender deg på en vei.">
+    <script>
+      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+    <style>
+      #mainContent {
+          display: none; /* Hide the main content by default */
+      }
+  </style>
+  </head>
+  <body>
+    <script>
+      if (localStorage.getItem('isLoggedIn') !== 'true') {
+          alert('Du må logge inn for å få tilgang til denne siden.');
+          window.location.href = '/'; // Redirect to the login page
+      }
+  </script>
+<style>
+body {
+  background-image: url(images/kunst.WebP);
+  margin: 0;
+  width: 100%;
+  height: auto;
+  color: #fc0000;
+  font-size: large;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 25%;
+  background-color: #000000;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+li a {
+  display: block;
+  color: #fc0000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a.active {
+  background-color: #ff0404;
+  color: rgb(0, 0, 0);
+  font-size: large;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+li a:hover:not(.active) {
+  background-color: #6b5f5f;
+  color: rgb(255, 0, 0);
+}
+
+img:hover {
+  transform: scaleX(-1);
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a class="active" href="index.html">Hjem</a></li>
+</ul>
+
+<div style="margin-left:25%;padding:1px 16px;height:1000px;">
+    <div id="mainContent">
+        <header>
+          <h1 style="text-align: center; color: red;"><strong><em>Oppsummering &#128513;</em></strong></h1>
+          <center><ol>
+            <li Style="color: rgb(253, 0, 0);"><strong><em>video Spill &#128513;</em></strong></li>
+            <p Style="color: rgb(255, 6, 6);"><strong><em>GTA5/COD/Phasmophobia &#128513;</em></strong></p>
+            <li Style="color: rgb(247, 7, 7);"><strong><em>fiske&jakt &#128513;</em></strong></li>
+            <p Style="color: rgb(255, 6, 6);"><strong><em>Laks/Ørret/Makrell &#128513;</em></strong></p>
+            <li Style="color: rgb(255, 6, 6);"><strong><em>Biler &#128513;</em></strong></li>
+            <p Style="color: rgb(255, 6, 6);"><strong><em>M5CS/M5E60/M8GCC &#128513;</em></strong></p>
+          </ol></center>
+          <button type="button"
+          onclick="document.getElementById('demo').innerHTML = Date()"><strong><em>Trykk meg til og vise tid/dato</em></strong></button>
+            <p id="demo"></p>
+            <buttontwo style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative;"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="images/info.WebP" alt="image of info sign"><strong><em>Click The image</em></strong></buttontwo>
+          <script>
+            // If logged in, show the main content
+            if (localStorage.getItem('isLoggedIn') === 'true') 
+                document.getElementById('mainContent').style.display = 'block'; // Show
+        </script> 
+        </body>
+        </html>
+          </body>
+           </html>
