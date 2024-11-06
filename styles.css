@@ -42,11 +42,10 @@ nav a[aria-current='page'] {
 }
 
 @media (max-width: 768px) {}
-main, #bmwImage {
+main {
   padding: 1rem;
-  image-rendering: optimizeSpeed;
-  image-resolution: 100dpi;
 }
+ 
 
 h1 {
   font-weight: bold;

@@ -37,7 +37,14 @@
 
         <main>
             <p><strong><em>Jeg liker å spille videospill og jakte. Jeg liker også biler.</em></strong></p>
-            <img id="bmwImage" alt="BMW parkert med leiligheter" src="images/bmwTwo.WebP">
+            <img 
+             id="bmwImage" 
+             alt="BMW parkert med leiligheter"
+             src="images/bmwTwo.WebP" 
+             srcset="images/bmwTwo-small.WebP 480w, images/bmwTwo-medium.WebP 768w, images/bmwTwo-large.WebP 1200w"
+             sizes="(max-width: 600px) 480px, (max-width: 1200px) 768px, 1200px"
+             loading="lazy">
+
         </main>
 
         <footer>
