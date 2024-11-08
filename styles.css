@@ -144,8 +144,9 @@ ol {
   height: auto;
 }
 
-
+@media (max-width: 768px) {}
 #bmwImage, #haukImage, #mainmaskinImage {
   max-width: 660px;
+  min-width: 100px;
   height: auto;
 }
