@@ -62,24 +62,26 @@ a {
 }
 
 .MineFavoritter {
-  border: black solid;
+  border: 0 black solid;
   text-align: top;
-  background-color: #8a8080;
-  color: rgb(251, 255, 0);
+  background-color: #776b6b;
+  max-width: 768px;
+  height: auto;
+  justify-self: center;
 }
 
 @media (max-width: 768px) {}
 .columns {
   flex-direction: row;
   display: flex;
-  gap: 20px;
+  gap: 10px;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 10px;
   }
 
   .column {
-  width: 100%; /* Make each column full-width on mobile */
-  margin-bottom: 20px; /* Add spacing between columns */
+  max-width: 768px; /* Make each column full-width on mobile */
+  margin-bottom: 0px; /* Add spacing between columns */
   background-size: cover;
   background-position: center;
   color: rgb(255, 255, 255);
@@ -146,7 +148,7 @@ ol {
 
 @media (max-width: 768px) {}
 #bmwImage, #haukImage, #mainmaskinImage {
-  max-width: 660px;
+  max-width: 768px;
   min-width: 100px;
   height: auto;
 }

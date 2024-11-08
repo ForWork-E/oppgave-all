@@ -11,7 +11,6 @@
         window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
       </script>
       <script defer src="/_vercel/insights/script.js"></script>
-    
 </head>
 <body>
     <nav>
@@ -20,7 +19,6 @@
         <a href="page3.html">Side 3</a>
         <a href="info.html">Oppsummering</a>
     </nav>
-
     <section id="loginSection">
         <h2 style="color: red;">Login</h2>
         <form id="loginForm" onsubmit="return validatePassword(event)">
@@ -30,24 +28,17 @@
         </form>
         <p id="loginMessage" style="color: red;"></p>
     </section>
-
     <div id="mainContent"> 
-        <header>
-            <h1>Min Side</h1>
-        </header>
-
         <main>
             <p><strong><em>Jeg liker å spille videospill og jakte. Jeg liker også biler.</em></strong></p>
             <img 
              id="bmwImage" 
              alt="BMW parkert med leiligheter"
              src="images/bmwTwo.WebP" 
-             srcset="images/bmwTwo-small.WebP 480w, images/bmwTwo-medium.WebP 768w, images/bmwTwo-large.WebP 1200w"
-             sizes="(max-width: 600px) 480px, (max-width: 1200px) 768px, 1200px"
+             srcset="images/bmwTwo-small.WebP 480w, images/bmwTwo-medium.WebP 660w, images/bmwTwo-large.WebP 750w"
+             sizes="(max-width: 660px) 480px, (max-width: 750px) 768px, 750px"
              loading="lazy">
-
         </main>
-
         <footer>
             <div class="MineFavoritter">
                 <div class="columns">
@@ -66,13 +57,13 @@
                      </div>  
                     </div> 
                  <div class="dropdown" onclick="playSound('sounds/bmw.mp4')">
-                    <button><strong><em>Dette er en BMW M8 Competition Gran Coupé</em></strong></button>
+                    <center><button><strong><em>Dette er en BMW M8 Competition Gran Coupé</em></strong></button></center>
                  </div>
                  <div class="dropdowntwo" onclick="playSound('sounds/bmw.mp4')">
-                    <button><strong><em>Dette er en BMW M5 CS Aggressiv PersonBil</em></strong></button>
+                    <center><button><strong><em>Dette er en BMW M5 CS Aggressiv PersonBil</em></strong></button></center>
                  </div>
                  <div class="dropdownthree" onclick="playSound('sounds/bmw.mp4')">
-                    <button><strong><em>Dette er en BMW M5 E60 med V10 Motor som ligner veldig på F1</em></strong></button>
+                    <center><button><strong><em>Dette er en BMW M5 E60 med V10 Motor som ligner veldig på F1</em></strong></button></center>
                 </div>
         </footer>
     <script>
