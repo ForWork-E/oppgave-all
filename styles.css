@@ -143,3 +143,9 @@ ol {
   width: 100%; /* Ensure images scale to fit smaller screens */
   height: auto;
 }
+
+
+#bmwImage, #haukImage, #mainmaskinImage {
+  max-width: 660px;
+  height: auto;
+}
