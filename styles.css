@@ -14,7 +14,7 @@ body {
   color: var(--primary-color);
   margin: 0;
   padding: 0;
-  background-color: #000000;
+  background-color: #1b1818;
 }
 
 nav {
@@ -27,7 +27,7 @@ nav {
 }
 
 nav a {
-  color: rgb(255, 0, 0);
+  color: rgb(255, 255, 255);
   text-decoration: none;
   font-weight: bold;
   padding: 10px 0;
@@ -35,8 +35,8 @@ nav a {
 
 
 nav a[aria-current='page'] {
-  color: #ff0303;
-  background-color: #000000;
+  color: rgb(255, 255, 255);
+  background-color: #353030;
   padding: 10px 0;
 }
 #loginForm {
@@ -52,11 +52,11 @@ main {
 h1 {
   font-weight: bold;
   font-size: 1.5rem;
-  color: #ff0000;
+  color: #000000;
 }
 
 p {
-  color: #fa0000;
+  color: #ffffff;
 }
 
 a {
@@ -66,7 +66,7 @@ a {
 .MineFavoritter {
   border: 0 black solid;
   text-align: top;
-  background-color: #776b6b;
+  background-color: #000000;
   max-width: 768px;
   height: auto;
   justify-self: center;
@@ -100,7 +100,7 @@ button {
   justify-content: center; /* Center items vertically */
   position: relative; /* Ensure dropdown content positions relative to this */
   background-color: rgb(163, 156, 156);
-  color: red;
+  color: rgb(255, 255, 255);
 }
 
 .column:hover {
@@ -115,7 +115,7 @@ button {
 .dropdown button, .dropdowntwo button, .dropdownthree button, #loginForm button {
   background: var(--button-color);
   border: none;
-  color: rgb(250, 4, 4);
+  color: rgb(255, 255, 255);
   padding: 10px 20px;
   cursor: pointer;
   transition: background 0.3s;
