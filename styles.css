@@ -125,6 +125,7 @@ button {
 .dropdown, .dropdowntwo, .dropdownthree {
   margin-top: 20px;
   text-align: center;
+  transform: scale(1.05);
 }
 
 .dropdown button, .dropdowntwo button, .dropdownthree button, #loginForm button {
@@ -138,6 +139,7 @@ button {
 
 .dropdown button:hover, .dropdowntwo button:hover, .dropdownthree button:hover, #loginForm button:hover {
   background: #b30000;
+  transform: scale(1.05);
 }
 
 ol {
