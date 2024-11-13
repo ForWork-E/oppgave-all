@@ -96,15 +96,19 @@ a {
   margin-top: 20px;
   }
 
+  @media (max-width: 768px) {}
   .column {
-  max-width: 780px; /* Make each column full-width on mobile */
+  width: 100%;
+  max-width: 100%; /* Make each column full-width on mobile */
   margin-bottom: 0px; /* Add spacing between columns */
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;  /* Avoid repeating the background image */
   color: yellow;
   text-align: center;
   cursor: pointer;
   transition: transform 0.3s;
+  height: 300px;
   }
 
 button {
@@ -132,7 +136,7 @@ button {
   background: var(--button-color);
   border: none;
   color: yellow;
-  padding: 20px;
+  padding: 10px;
   cursor: pointer;
   transition: background 0.3s;
 }
@@ -168,7 +172,8 @@ ol {
 
 @media (max-width: 768px) {}
 #bmwImage, #haukImage, #mainmaskinImage {
-  max-width: 780px;
+  max-width: 768px;
   min-width: 100px;
   height: auto;
+  width: auto;
 }
