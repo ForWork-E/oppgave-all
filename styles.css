@@ -1,5 +1,5 @@
 :root {
-  --primary-color: rgb(0, 0, 0);
+  --primary-color: yellow;
   --secondary-color: rgb(0, 66, 11);
   --button-color: #000000;
   --font-family: Arial, sans-serif;
@@ -27,7 +27,7 @@ nav {
 }
 
 nav a {
-  color: rgb(192, 109, 1);;
+  color: yellow;
   text-decoration: none;
   font-weight: bold;
   padding: 10px 0;
@@ -35,7 +35,7 @@ nav a {
 
 
 nav a[aria-current='page'] {
-  color: rgb(192, 109, 1);;
+  color: yellow;
   background-color: #353030;
   padding: 10px 0;
 }
@@ -52,7 +52,7 @@ main {
 h1 {
   font-weight: bold;
   font-size: 1.5rem;
-  color: #000000;
+  color: yellow;
 }
 
 /* Define the keyframes for rainbow colors */
@@ -101,7 +101,7 @@ a {
   margin-bottom: 0px; /* Add spacing between columns */
   background-size: cover;
   background-position: center;
-  color: rgb(192, 109, 1);
+  color: yellow;
   text-align: center;
   cursor: pointer;
   transition: transform 0.3s;
@@ -130,7 +130,7 @@ button {
 .dropdown button, .dropdowntwo button, .dropdownthree button, #loginForm button {
   background: var(--button-color);
   border: none;
-  color: rgb(192, 109, 1);
+  color: yellow;
   padding: 10px 20px;
   cursor: pointer;
   transition: background 0.3s;
