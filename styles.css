@@ -1,6 +1,6 @@
 :root {
   --primary-color: rgb(0, 0, 0);
-  --secondary-color: rgb(0, 0, 0);
+  --secondary-color: rgb(0, 66, 11);
   --button-color: #000000;
   --font-family: Arial, sans-serif;
 }
@@ -55,12 +55,27 @@ h1 {
   color: #000000;
 }
 
-p {
-  color: rgb(192, 109, 1);
+/* Define the keyframes for rainbow colors */
+@keyframes rainbow {
+  0% { color: red; }
+  14% { color: orange; }
+  28% { color: yellow; }
+  42% { color: green; }
+  57% { color: blue; }
+  71% { color: indigo; }
+  85% { color: violet; }
+  100% { color: red; }
+}
+
+.rainbow-text {
+  font-size: 18px; /* Adjust font size as needed */
+  font-weight: bold;
+  text-align: center;
+  animation: rainbow 5s linear infinite; /* 3s duration, smooth transition, infinite loop */
 }
 
 a {
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(0, 66, 11);
 }
 
 .MineFavoritter {
