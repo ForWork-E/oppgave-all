@@ -93,7 +93,7 @@ a {
   display: flex;
   gap: 10px;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 20px;
   }
 
   .column {
@@ -132,7 +132,7 @@ button {
   background: var(--button-color);
   border: none;
   color: yellow;
-  padding: 10px 20px;
+  padding: 20px;
   cursor: pointer;
   transition: background 0.3s;
 }
@@ -162,6 +162,7 @@ ol {
 
 #mainContent img {
   width: 100%; /* Ensure images scale to fit smaller screens */
+  min-width: 100px;
   height: auto;
 }
 
