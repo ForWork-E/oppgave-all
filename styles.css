@@ -82,7 +82,7 @@ a {
   border: 0 black solid;
   text-align: top;
   background-color: #000000;
-  max-width: 768px;
+  max-width: 780px;
   height: auto;
   justify-self: center;
 }
@@ -97,7 +97,7 @@ a {
   }
 
   .column {
-  max-width: 768px; /* Make each column full-width on mobile */
+  max-width: 780px; /* Make each column full-width on mobile */
   margin-bottom: 0px; /* Add spacing between columns */
   background-size: cover;
   background-position: center;
@@ -168,7 +168,7 @@ ol {
 
 @media (max-width: 768px) {}
 #bmwImage, #haukImage, #mainmaskinImage {
-  max-width: 768px;
+  max-width: 780px;
   min-width: 100px;
   height: auto;
 }
