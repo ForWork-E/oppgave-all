@@ -74,35 +74,56 @@
                     <center><button><strong><em>Dette er en BMW M5 E60 med V10 Motor som ligner veldig på F1</em></strong></button></center>
                 </div>
         </footer>
-    <script>
-        function validatePassword(event) {
-            event.preventDefault(); 
-            const passwordInput = document.getElementById('password');
+        <script>
+            let typingStartTime = null;
+            let typingTimeout = null;
+            const TYPING_THRESHOLD = 9000;
             const correctPassword = 'ForWork-E';
-
-            if (passwordInput.value === correctPassword) {
-                alert('Innlogging vellykket!');
-                localStorage.setItem('isLoggedIn', 'true');
-                document.getElementById('mainContent').style.display = 'block';
-                document.getElementById('loginSection').style.display = 'none';
-            } else {
-                document.getElementById('loginMessage').innerText = 'Feil passord, prøv igjen.';
-                passwordInput.value = '';
+        
+            function validatePassword(event) {
+                event.preventDefault(); 
+                const passwordInput = document.getElementById('password');
+                const passwordValue = passwordInput.value;
+        
+                if (typingStartTime === null) {
+                    typingStartTime = Date.now();
+                }
+        
+                clearTimeout(typingTimeout);
+                typingTimeout = setTimeout(() => {
+                    typingStartTime = null; // 
+                }, TYPING_THRESHOLD);
+        
+                const typingDuration = Date.now() - typingStartTime;
+                
+                if (typingDuration < TYPING_THRESHOLD) {
+                    document.getElementById('loginMessage').innerText = 'Feil passord, prøv igjen.';
+                    passwordInput.value = ''; 
+                } else {
+                    if (passwordValue === correctPassword) {
+                        alert('Innlogging vellykket!');
+                        localStorage.setItem('isLoggedIn', 'true');
+                        document.getElementById('mainContent').style.display = 'block';
+                        document.getElementById('loginSection').style.display = 'none';
+                    } else {
+                        document.getElementById('loginMessage').innerText = 'Feil passord, prøv igjen.';
+                        passwordInput.value = '';
+                    }
+                }
             }
-        }
-
-        // Show main content if logged in
-        window.addEventListener('DOMContentLoaded', () => {
-            if (localStorage.getItem('isLoggedIn') === 'true') {
-                document.getElementById('mainContent').style.display = 'block';
-                document.getElementById('loginSection').style.display = 'none';
+        
+            window.addEventListener('DOMContentLoaded', () => {
+                if (localStorage.getItem('isLoggedIn') === 'true') {
+                    document.getElementById('mainContent').style.display = 'block';
+                    document.getElementById('loginSection').style.display = 'none';
+                }
+            });
+        
+            function playSound(src) {
+                const audio = new Audio(src);
+                audio.play();
             }
-        });
-
-        function playSound(src) {
-            const audio = new Audio(src);
-            audio.play();
-        }
-    </script>
+        </script>
+        
 </body>
 </html>
