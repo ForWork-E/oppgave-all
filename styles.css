@@ -55,7 +55,6 @@ h1 {
   color: yellow;
 }
 
-/* Define the keyframes for rainbow colors */
 @keyframes rainbow {
   0% { color: red; }
   14% { color: orange; }
@@ -68,10 +67,10 @@ h1 {
 }
 
 .rainbow-text {
-  font-size: 18px; /* Adjust font size as needed */
+  font-size: 18px; 
   font-weight: bold;
   text-align: center;
-  animation: rainbow 5s linear infinite; /* 3s duration, smooth transition, infinite loop */
+  animation: rainbow 5s linear infinite; 
 }
 
 a {
@@ -99,10 +98,10 @@ a {
   @media (max-width: 770px) {}
   .column {
   width: 100%;
-  max-width: 100%; /* Make each column full-width on mobile */
+  max-width: 100%; 
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;  /* Avoid repeating the background image */
+  background-repeat: no-repeat;  
   color: yellow;
   text-align: center;
   cursor: pointer;
@@ -111,12 +110,13 @@ a {
   }
 
 button {
-  text-align: center;
-  display: flex; /* Use flexbox for centering */
-  flex-direction: column; /* Stack items vertically */
-  align-items: center; /* Center items horizontally */
-  justify-content: center; /* Center items vertically */
-  position: relative; /* Ensure dropdown content positions relative to this */
+  text-align: center; 
+  font-size: 18px;
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+  position: relative; 
   background-color: rgb(163, 156, 156);
   color: rgb(255, 255, 255);
 }
@@ -164,7 +164,7 @@ ol {
 }
 
 #mainContent img {
-  width: 100%; /* Ensure images scale to fit smaller screens */
+  width: 100%; 
   min-width: 100px;
   height: auto;
 }
